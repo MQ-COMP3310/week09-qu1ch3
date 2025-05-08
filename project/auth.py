@@ -42,7 +42,7 @@ def signup_post():
 #Fix vulnerable SQL statement -->
     '''user = db.session.execute(text('select * from user where email = "' + email +'"')).all()
     if len(user) > 0:'''
-    user = User.query.filter_by(email=email).first()
+    user = User.query.filter_by(email=email).all() #check all users
     if user: # if a user is found, we want to redirect back to signup page so user can try again
         flash('Email address already exists')  # 'flash' function stores a message accessible in the template code.
         app.logger.debug("User email already exists")
