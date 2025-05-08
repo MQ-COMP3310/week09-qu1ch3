@@ -24,7 +24,7 @@ NOTES:
 
 # Initialising the database
 
-You should first initialise the database as follows:
+You should first initialise the database as follows: 
 - python initialise_db.py
 
 This should create an sqlite database under the instance directory. You can view the contents of the database using the sqlite command line interface as follows:
